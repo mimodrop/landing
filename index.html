@@ -1,11 +1,226 @@
 <!DOCTYPE html>
-<html lang="fa-IR" dir="rtl">
+<html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mimo Landing</title>
+    <title>روال مراقبت از پوست</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+        }
+        .tab-active {
+            background-color: #3b82f6; /* bg-blue-600 */
+            color: white;
+        }
+        /* برای نمایش بهتر در حالت راست‌چین */
+        .prose {
+            text-align: right;
+        }
+    </style>
 </head>
-<body>
-    Welcome to Mimo Drop Landing
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
+
+    <div class="container mx-auto p-4 sm:p-6 lg:p-8">
+        <header class="text-center mb-8">
+            <h1 class="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-400">یلدای قشنگم اینجا روتین کامل مراقبت از پوستت رو ببین (صبح و شب)</h1>
+        </header>
+
+        <!-- Tabs for AM/PM -->
+        <div class="flex justify-center border-b border-gray-200 dark:border-gray-700 mb-8">
+            <button id="am-tab" class="py-3 px-6 text-lg font-semibold rounded-t-lg -mb-px tab-active" onclick="showRoutine('am')">🌅 روال صبحگاهی (AM)</button>
+            <button id="pm-tab" class="py-3 px-6 text-lg font-semibold rounded-t-lg" onclick="showRoutine('pm')">🌙 روال شبانه (PM)</button>
+        </div>
+
+        <!-- AM Routine Content -->
+        <div id="am-routine" class="space-y-8">
+            <!-- Product Card 1: Cleanser -->
+            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden md:flex">
+                <div class="md:w-1/3 flex items-center justify-center p-4 bg-gray-100 dark:bg-gray-700">
+                    <img class="h-48 w-auto object-contain" src="./image/cerave-hydrating-cleanser-p33290.png" alt="تصویر پاک‌کننده CeraVe">
+                </div>
+                <div class="p-6 md:w-2/3">
+                    <h3 class="text-2xl font-bold text-blue-500 mb-2">۱. شوینده صورت: شوینده هیدراته‌کننده CeraVe</h3>
+                    <p class="font-semibold mb-2">فواید:</p>
+                    <p class="mb-4">این شوینده بدون کف و بدون عطر، پوست رو حسابی مرطوب می‌کنه و سد طبیعی پوست رو تقویت می‌کنه. با سرامیدها و هیالورونیک اسید، برای پوست‌های خشک و حساس عالیه.</p>
+                    <p class="font-semibold mb-2">روش استفاده:</p>
+                    <p>مقدار کمی ازش رو روی پوست مرطوب بزن، با حرکات دایره‌ای آروم ماساژ بده، بعد با آب ولرم بشور تا آلودگی‌ها، چربی اضافی و ناخالصی‌ها پاک بشن.</p>
+                </div>
+            </div>
+
+            <!-- Product Card 2: Hyaluronic Acid Serum -->
+            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden md:flex">
+                <div class="md:w-1/3 flex items-center justify-center p-4 bg-gray-100 dark:bg-gray-700">
+                    <img class="h-48 w-auto object-contain" src="./image/ord-hyaluronic-acid-2pct-B5-30ml-Clr-Acu.webp" alt="تصویر سرم اسید هیالورونیک The Ordinary">
+                </div>
+                <div class="p-6 md:w-2/3">
+                    <h3 class="text-2xl font-bold text-blue-500 mb-2">۲. سرم هیالورونیک اسید: سرم هیالورونیک اسید 2% + B5 اوردینری</h3>
+                    <p class="font-semibold mb-2">فواید:</p>
+                    <p class="mb-4">این سرم با چند نوع هیالورونیک اسید، پوست رو در لایه‌های مختلف آبرسانی می‌کنه. ویتامین B5 هم به تقویت سد پوستی کمک می‌کنه و برای همه نوع پوست مناسبه.</p>
+                    <p class="font-semibold mb-2">روش استفاده:</p>
+                    <p>2-3 قطره رو روی پوست مرطوب بزن و آروم فشار بده تا خوب جذب بشه. پوست رو حسابی پر و شاداب می‌کنه و خشکی و خطوط ریز رو کم می‌کنه.</p>
+                </div>
+            </div>
+
+            <!-- Product Card 3: Moisturizer -->
+            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden md:flex">
+                <div class="md:w-1/3 flex items-center justify-center p-4 bg-gray-100 dark:bg-gray-700">
+                    <img class="h-48 w-auto object-contain" src="./image/Multi_Ceramide_Cream_50ml.png" alt="تصویر کرم مرطوب‌کننده Tocobo">
+                </div>
+                <div class="p-6 md:w-2/3">
+                    <h3 class="text-2xl font-bold text-blue-500 mb-2">۳. مرطوب‌کننده: کرم مولتی سرامید Tocobo</h3>
+                    <p class="font-semibold mb-2">فواید:</p>
+                    <p class="mb-4">این مرطوب‌کننده پر از سرامید (پنج نوع!) و سه نوع هیالورونیک اسیده که سد پوستی رو تقویت می‌کنه و از هدر رفتن رطوبت جلوگیری می‌کنه. برای پوست حساس عالیه.</p>
+                    <p class="font-semibold mb-2">روش استفاده:</p>
+                    <p>مقدار کافی بردار و روی کل صورت پخش کن، بعد آروم ماساژ بده تا کامل جذب بشه.</p>
+                </div>
+            </div>
+            
+            <!-- Product Card 4: Sunscreen -->
+            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden md:flex">
+                <div class="md:w-1/3 flex items-center justify-center p-4 bg-gray-100 dark:bg-gray-700">
+                    <img class="h-48 w-auto object-contain" src="./image/Centella.png" alt="تصویر کرم ضد آفتاب SKIN1004">
+                </div>
+                <div class="p-6 md:w-2/3">
+                    <h3 class="text-2xl font-bold text-blue-500 mb-2">۴. ضدآفتاب: سرم ضدآفتاب Madagascar Centella Hyalu-Cica</h3>
+                    <p class="font-semibold mb-2">فواید:</p>
+                    <p class="mb-4">این ضدآفتاب سبک، از پوست در برابر اشعه‌های UVA و UVB محافظت می‌کنه و همزمان پوست رو آبرسانی می‌کنه. با عصاره سنتلا آسیاتیکا پوست رو آروم می‌کنه و هیالورونیک اسید رطوبت رو نگه می‌داره.</p>
+                    <p class="font-semibold mb-2">روش استفاده:</p>
+                    <p>به‌عنوان آخرین مرحله صبح‌ها، مقدار کافی روی صورت و گردن بزن. اگه مدت طولانی زیر آفتابی، هر 2-3 ساعت تمدید کن.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PM Routine Content -->
+        <div id="pm-routine" class="hidden space-y-8">
+            <!-- Product Card 1: Cleanser -->
+            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden md:flex">
+                <div class="md:w-1/3 flex items-center justify-center p-4 bg-gray-100 dark:bg-gray-700">
+                    <img class="h-48 w-auto object-contain" src="./image/cerave-hydrating-cleanser-p33290.png" alt="تصویر پاک‌کننده CeraVe">
+                </div>
+                <div class="p-6 md:w-2/3">
+                    <h3 class="text-2xl font-bold text-purple-500 mb-2">۱. شوینده صورت: شوینده هیدراته‌کننده CeraVe</h3>
+                    <p class="font-semibold mb-2">روش استفاده:</p>
+                    <p>شب‌ها صورتت رو حسابی تمیز کن تا آرایش، آلودگی و ناخالصی‌های روز پاک بشن. مثل روتین صبح عمل کن.</p>
+                </div>
+            </div>
+
+            <!-- Product Card 2: Hyaluronic Acid Serum -->
+            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden md:flex">
+                <div class="md:w-1/3 flex items-center justify-center p-4 bg-gray-100 dark:bg-gray-700">
+                    <img class="h-48 w-auto object-contain" src="./image/ord-hyaluronic-acid-2pct-B5-30ml-Clr-Acu.webp" alt="تصویر سرم اسید هیالورونیک The Ordinary">
+                </div>
+                <div class="p-6 md:w-2/3">
+                    <h3 class="text-2xl font-bold text-purple-500 mb-2">۲. سرم هیالورونیک اسید: سرم هیالورونیک اسید 2% + B5 اوردینری</h3>
+                    <p class="font-semibold mb-2">روش استفاده:</p>
+                    <p>2-3 قطره رو روی پوست مرطوب بزن تا پوستت تو خواب حسابی آبرسانی و نرم بشه.</p>
+                </div>
+            </div>
+            
+            <!-- Product Card 3: Caffeine Serum -->
+            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden md:flex">
+                <div class="md:w-1/3 flex items-center justify-center p-4 bg-gray-100 dark:bg-gray-700">
+                    <img class="h-48 w-auto object-contain" src="./image/rdn-caffeine-solution-5pct-egcg-30ml.webp" alt="تصویر سرم کافئین The Ordinary">
+                </div>
+                <div class="p-6 md:w-2/3">
+                    <h3 class="text-2xl font-bold text-purple-500 mb-2">۳. سرم کافئین: سرم کافئین 5% + EGCG اوردینری</h3>
+                    <p class="font-semibold mb-2">فواید:</p>
+                    <p class="mb-4">این سرم سبک، پف و تیرگی زیر چشم رو کم می‌کنه. کافئین رگ‌های خونی رو منقبض می‌کنه و التهاب رو کاهش می‌ده، و EGCG (یه آنتی‌اکسیدان قوی از چای سبز) از پوست محافظت می‌کنه.</p>
+                    <p class="font-semibold mb-2">روش استفاده:</p>
+                    <p>با انگشت حلقه، مقدار کمی رو زیر چشم بزن و آروم ضربه بزن تا جذب بشه. برای شب عالیه چون پف چشم رو کم می‌کنه و چشم‌های خسته رو جون می‌ده.</p>
+                </div>
+            </div>
+
+            <!-- Product Card 4: Moisturizer -->
+            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden md:flex">
+                <div class="md:w-1/3 flex items-center justify-center p-4 bg-gray-100 dark:bg-gray-700">
+                    <img class="h-48 w-auto object-contain" src="./image/Multi_Ceramide_Cream_50ml.png" alt="تصویر کرم مرطوب‌کننده Tocobo">
+                </div>
+                <div class="p-6 md:w-2/3">
+                    <h3 class="text-2xl font-bold text-purple-500 mb-2">۴. مرطوب‌کننده: کرم مولتی سرامید Tocobo</h3>
+                    <p class="font-semibold mb-2">روش استفاده:</p>
+                    <p>بعد از سرم‌ها، مقدار کافی از این مرطوب‌کننده غلیظ رو روی صورت بزن و آروم ماساژ بده تا رطوبت پوستت قفل بشه و پوستت تو خواب ترمیم بشه.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Recommendations Section -->
+        <div class="mt-12 bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 prose prose-lg max-w-none">
+            <h2 class="text-2xl font-bold text-gray-700 dark:text-gray-300 border-b-2 border-blue-500 pb-2 mb-4">توصیه‌های اضافه:</h2>
+            <div class="space-y-4">
+                <div>
+                    <h4 class="font-bold">۱. کنترل جوش‌های کومدونال (سرسیاه و سرسفید):</h4>
+                    <p><strong>هدف:</strong> درمان جوش‌های کومدونال بدون تحریک پوست. <br> <strong>توصیه:</strong> از فشار دادن یا کندن جوش‌ها خودداری کن تا پوستت اذیت نشه و جای زخم نذاره. روتین رو مرتب ادامه بده.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold">۲. نرمال‌سازی کراتینیزاسیون فولیکولی:</h4>
+                    <p><strong>هدف:</strong> تنظیم ریزش سلول‌های پوست اطراف فولیکول‌های مو برای جلوگیری از بسته شدن منافذ. <br> <strong>توصیه:</strong> تو مراحل بعدی (فاز 2) از لایه‌بردارهای ملایم و رتینوئیدها استفاده میکنیم تا کراتینیزاسیون تنظیم بشه.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold">۳. افزایش استفاده از ضدآفتاب:</h4>
+                    <p><strong>هدف:</strong> محافظت از پوست در برابر آسیب‌های UV، به‌خصوص تو مراحل فعال درمان. <br> <strong>توصیه:</strong> هر صبح ضدآفتاب بزن و اگه زیر آفتابی، هر 2-3 ساعت تمدید کن. تو ساعات اوج آفتاب (10 صبح تا 4 بعدازظهر) مستقیم زیر نور نرو.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold">۴. تقویت سد پوستی:</h4>
+                    <p><strong>هدف:</strong> بازسازی و تقویت سد محافظ پوست. <br> <strong>توصیه:</strong> به استفاده از محصولاتی با سرامید، هیالورونیک اسید و مواد تقویت‌کننده ادامه بده تا پوستت مرطوب و سالم بمونه.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold">۵. آرام کردن پوست:</h4>
+                    <p><strong>هدف:</strong> کاهش التهاب و کمک به ترمیم پوست. <br> <strong>توصیه:</strong> از موادی مثل سنتلا آسیاتیکا (تو ضدآفتابت) و مرطوب‌کننده‌های تسکین‌دهنده واست استفاده کردیم.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Lifestyle Recommendations Section -->
+        <div class="mt-8 bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 prose prose-lg max-w-none">
+            <h2 class="text-2xl font-bold text-gray-700 dark:text-gray-300 border-b-2 border-purple-500 pb-2 mb-4">توصیه‌های سبک زندگی:</h2>
+            <ul class="list-disc list-inside space-y-2">
+                <li><span class="font-bold">سلامت تیروئید:</span> چون کم‌کاری تیروئید داری، ممکنه ترمیم پوستت یه کم کندتر باشه. پس مواد فعال (مثل رتینوئیدها) رو آروم آروم به روتینت اضافه می‌کنیم و واکنش پوستت رو چک می‌کنیم.</li>
+                <li><span class="font-bold">دوری از دستکاری پوست:</span> کندن یا فشار دادن جوش‌ها باعث بدتر شدنشون و زخم شدن پوست می‌شه. بذار پوستت خودش خوب بشه.</li>
+                <li><span class="font-bold">آبرسانی و خواب کافی:</span> حسابی آب بخور و خوب بخواب تا پوستت بتونه خودش رو ترمیم کنه.</li>
+                <li><span class="font-bold">رژیم غذایی متعادل:</span> غذاهای پر از آنتی‌اکسیدان، چربی‌های سالم و ویتامین بخور تا پوستت قوی و سالم بمونه.</li>
+            </ul>
+        </div>
+        
+        <!-- Red Flags Section -->
+        <div class="mt-8 border-t-4 border-red-500 bg-red-50 dark:bg-red-900/20 rounded-lg p-6">
+             <h2 class="text-2xl font-bold text-red-600 dark:text-red-400 mb-4">🚩 هشدارهای مهم:</h2>
+             <ul class="list-disc list-inside space-y-2 text-red-700 dark:text-red-300">
+                <li><span class="font-bold">جوش‌های جدید یا تحریک شدید:</span> اگه جوش‌های عمیق جدید زدی یا پوستت خیلی تحریک شد (مخصوصا با رتینوئیدها تو مراحل بعدی)، درمان رو متوقف کن و با به Mi Mo پیام بده و مشورت کن.</li>
+                <li><span class="font-bold">نیاز به ارجاع:</span> اگه بعد از 3 ماه استفاده مداوم از روتین، بهبودی ندیدی یا جای زخم و اسکار روی پوستت ایجاد شد، حتما به Mi Mo پیام بده.</li>
+             </ul>
+        </div>
+
+        <footer class="text-center mt-8 text-gray-600 dark:text-gray-400">
+            <p>این روتین رو با حوصله دنبال کن، پوستت کم‌کم حسابی حالش خوب می‌شه! 😊 اگه سوالی داشتی، به Mi Mo پیام بده تا بیشتر راهنمایی کنم.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        // Function to switch between AM and PM routines
+        function showRoutine(routine) {
+            const amRoutine = document.getElementById('am-routine');
+            const pmRoutine = document.getElementById('pm-routine');
+            const amTab = document.getElementById('am-tab');
+            const pmTab = document.getElementById('pm-tab');
+
+            if (routine === 'am') {
+                amRoutine.classList.remove('hidden');
+                pmRoutine.classList.add('hidden');
+                amTab.classList.add('tab-active');
+                pmTab.classList.remove('tab-active');
+            } else {
+                amRoutine.classList.add('hidden');
+                pmRoutine.classList.remove('hidden');
+                pmTab.classList.add('tab-active');
+                amTab.classList.remove('tab-active');
+            }
+        }
+    </script>
+
 </body>
 </html>
