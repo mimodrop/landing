@@ -20,12 +20,21 @@
         .prose {
             text-align: right;
         }
+        /* اصلاح شده: استفاده از ماسک برای تغییر رنگ داینامیک لوگو */
+        .logo {
+            -webkit-mask: url(./image/logo-black.png) no-repeat center;
+            mask: url(./image/logo-black.png) no-repeat center;
+            -webkit-mask-size: contain;
+            mask-size: contain;
+        }
     </style>
 </head>
 <body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
 
     <div class="container mx-auto p-4 sm:p-6 lg:p-8">
         <header class="text-center mb-8">
+            <!-- اصلاح شده: استفاده از div و کلاس‌های پس‌زمینه برای رنگ لوگو -->
+            <div class="logo h-16 w-40 mx-auto mb-4 bg-gray-800 dark:bg-gray-200"></div>
             <h1 class="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-400">یلدای قشنگم اینجا روتین کامل مراقبت از پوستت رو ببین (صبح و شب)</h1>
         </header>
 
@@ -40,7 +49,7 @@
             <!-- Product Card 1: Cleanser -->
             <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden md:flex">
                 <div class="md:w-1/3 flex items-center justify-center p-4 bg-gray-100 dark:bg-gray-700">
-                    <img class="h-48 w-auto object-contain" src="./image/cerave-hydrating-cleanser-p33290.png" alt="تصویر پاک‌کننده CeraVe">
+                    <img class="h-48 w-auto object-contain" src="./image/cerave-hydrating-cleanser-p33290.png" alt="تصویر پاک‌کننده CeraVe" onerror="this.onerror=null;this.src='https://placehold.co/200x200/e2e8f0/64748b?text=Image+Not+Found';">
                 </div>
                 <div class="p-6 md:w-2/3">
                     <h3 class="text-2xl font-bold text-blue-500 mb-2">۱. شوینده صورت: شوینده هیدراته‌کننده CeraVe</h3>
@@ -54,7 +63,7 @@
             <!-- Product Card 2: Hyaluronic Acid Serum -->
             <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden md:flex">
                 <div class="md:w-1/3 flex items-center justify-center p-4 bg-gray-100 dark:bg-gray-700">
-                    <img class="h-48 w-auto object-contain" src="./image/ord-hyaluronic-acid-2pct-B5-30ml-Clr-Acu.webp" alt="تصویر سرم اسید هیالورونیک The Ordinary">
+                    <img class="h-48 w-auto object-contain" src="./image/ord-hyaluronic-acid-2pct-B5-30ml-Clr-Acu.webp" alt="تصویر سرم اسید هیالورونیک The Ordinary" onerror="this.onerror=null;this.src='https://placehold.co/200x200/e2e8f0/64748b?text=Image+Not+Found';">
                 </div>
                 <div class="p-6 md:w-2/3">
                     <h3 class="text-2xl font-bold text-blue-500 mb-2">۲. سرم هیالورونیک اسید: سرم هیالورونیک اسید 2% + B5 اوردینری</h3>
@@ -68,7 +77,7 @@
             <!-- Product Card 3: Moisturizer -->
             <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden md:flex">
                 <div class="md:w-1/3 flex items-center justify-center p-4 bg-gray-100 dark:bg-gray-700">
-                    <img class="h-48 w-auto object-contain" src="./image/Multi_Ceramide_Cream_50ml.png" alt="تصویر کرم مرطوب‌کننده Tocobo">
+                    <img class="h-48 w-auto object-contain" src="./image/Multi_Ceramide_Cream_50ml.png" alt="تصویر کرم مرطوب‌کننده Tocobo" onerror="this.onerror=null;this.src='https://placehold.co/200x200/e2e8f0/64748b?text=Image+Not+Found';">
                 </div>
                 <div class="p-6 md:w-2/3">
                     <h3 class="text-2xl font-bold text-blue-500 mb-2">۳. مرطوب‌کننده: کرم مولتی سرامید Tocobo</h3>
@@ -82,12 +91,12 @@
             <!-- Product Card 4: Sunscreen -->
             <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden md:flex">
                 <div class="md:w-1/3 flex items-center justify-center p-4 bg-gray-100 dark:bg-gray-700">
-                    <img class="h-48 w-auto object-contain" src="./image/Centella.png" alt="تصویر کرم ضد آفتاب SKIN1004">
+                    <img class="h-48 w-auto object-contain" src="./image/Centella.png" alt="تصویر کرم ضد آفتاب SKIN1004" onerror="this.onerror=null;this.src='https://placehold.co/200x200/e2e8f0/64748b?text=Image+Not+Found';">
                 </div>
                 <div class="p-6 md:w-2/3">
                     <h3 class="text-2xl font-bold text-blue-500 mb-2">۴. ضدآفتاب: سرم ضدآفتاب Madagascar Centella Hyalu-Cica</h3>
                     <p class="font-semibold mb-2">فواید:</p>
-                    <p class="mb-4">این ضدآفتاب سبک، از پوست در برابر اشعه‌های UVA و UVB محافظت می‌کنه و همزمان پوست رو آبرسانی می‌کنه. با عصاره سنتلا آسیاتیکا پوست رو آروم می‌کنه و هیالورونیک اسید رطوبت رو نگه می‌داره.</p>
+                    <p class="mb-4">این ضدآftab سبک، از پوست در برابر اشعه‌های UVA و UVB محافظت می‌کنه و همزمان پوست رو آبرسانی می‌کنه. با عصاره سنتلا آسیاتیکا پوست رو آروم می‌کنه و هیالورونیک اسید رطوبت رو نگه می‌داره.</p>
                     <p class="font-semibold mb-2">روش استفاده:</p>
                     <p>به‌عنوان آخرین مرحله صبح‌ها، مقدار کافی روی صورت و گردن بزن. اگه مدت طولانی زیر آفتابی، هر 2-3 ساعت تمدید کن.</p>
                 </div>
@@ -99,7 +108,7 @@
             <!-- Product Card 1: Cleanser -->
             <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden md:flex">
                 <div class="md:w-1/3 flex items-center justify-center p-4 bg-gray-100 dark:bg-gray-700">
-                    <img class="h-48 w-auto object-contain" src="./image/cerave-hydrating-cleanser-p33290.png" alt="تصویر پاک‌کننده CeraVe">
+                    <img class="h-48 w-auto object-contain" src="./image/cerave-hydrating-cleanser-p33290.png" alt="تصویر پاک‌کننده CeraVe" onerror="this.onerror=null;this.src='https://placehold.co/200x200/e2e8f0/64748b?text=Image+Not+Found';">
                 </div>
                 <div class="p-6 md:w-2/3">
                     <h3 class="text-2xl font-bold text-purple-500 mb-2">۱. شوینده صورت: شوینده هیدراته‌کننده CeraVe</h3>
@@ -111,7 +120,7 @@
             <!-- Product Card 2: Hyaluronic Acid Serum -->
             <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden md:flex">
                 <div class="md:w-1/3 flex items-center justify-center p-4 bg-gray-100 dark:bg-gray-700">
-                    <img class="h-48 w-auto object-contain" src="./image/ord-hyaluronic-acid-2pct-B5-30ml-Clr-Acu.webp" alt="تصویر سرم اسید هیالورونیک The Ordinary">
+                    <img class="h-48 w-auto object-contain" src="./image/ord-hyaluronic-acid-2pct-B5-30ml-Clr-Acu.webp" alt="تصویر سرم اسید هیالورونیک The Ordinary" onerror="this.onerror=null;this.src='https://placehold.co/200x200/e2e8f0/64748b?text=Image+Not+Found';">
                 </div>
                 <div class="p-6 md:w-2/3">
                     <h3 class="text-2xl font-bold text-purple-500 mb-2">۲. سرم هیالورونیک اسید: سرم هیالورونیک اسید 2% + B5 اوردینری</h3>
@@ -123,7 +132,7 @@
             <!-- Product Card 3: Caffeine Serum -->
             <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden md:flex">
                 <div class="md:w-1/3 flex items-center justify-center p-4 bg-gray-100 dark:bg-gray-700">
-                    <img class="h-48 w-auto object-contain" src="./image/rdn-caffeine-solution-5pct-egcg-30ml.webp" alt="تصویر سرم کافئین The Ordinary">
+                    <img class="h-48 w-auto object-contain" src="./image/rdn-caffeine-solution-5pct-egcg-30ml.webp" alt="تصویر سرم کافئین The Ordinary" onerror="this.onerror=null;this.src='https://placehold.co/200x200/e2e8f0/64748b?text=Image+Not+Found';">
                 </div>
                 <div class="p-6 md:w-2/3">
                     <h3 class="text-2xl font-bold text-purple-500 mb-2">۳. سرم کافئین: سرم کافئین 5% + EGCG اوردینری</h3>
@@ -137,7 +146,7 @@
             <!-- Product Card 4: Moisturizer -->
             <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden md:flex">
                 <div class="md:w-1/3 flex items-center justify-center p-4 bg-gray-100 dark:bg-gray-700">
-                    <img class="h-48 w-auto object-contain" src="./image/Multi_Ceramide_Cream_50ml.png" alt="تصویر کرم مرطوب‌کننده Tocobo">
+                    <img class="h-48 w-auto object-contain" src="./image/Multi_Ceramide_Cream_50ml.png" alt="تصویر کرم مرطوب‌کننده Tocobo" onerror="this.onerror=null;this.src='https://placehold.co/200x200/e2e8f0/64748b?text=Image+Not+Found';">
                 </div>
                 <div class="p-6 md:w-2/3">
                     <h3 class="text-2xl font-bold text-purple-500 mb-2">۴. مرطوب‌کننده: کرم مولتی سرامید Tocobo</h3>
@@ -195,6 +204,8 @@
         </div>
 
         <footer class="text-center mt-8 text-gray-600 dark:text-gray-400">
+            <!-- اصلاح شده: استفاده از div و کلاس‌های پس‌زمینه برای رنگ لوگو -->
+            <div class="logo h-12 w-32 mx-auto mb-4 bg-gray-800 dark:bg-gray-200"></div>
             <p>این روتین رو با حوصله دنبال کن، پوستت کم‌کم حسابی حالش خوب می‌شه! 😊 اگه سوالی داشتی، به Mi Mo پیام بده تا بیشتر راهنمایی کنم.</p>
         </footer>
 
